@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view
 
 
 @api_view(['GET','POST'])
-def drink_list(request):
+def drink_list(request, format=None):
     
     # get all the drinks
     # serialize them
@@ -28,7 +28,7 @@ def drink_list(request):
     
     
 @api_view(['GET', 'PUT', 'DELETE'])
-def drink_detail(request, pk):
+def drink_detail(request, pk, format=None):
     
     # get the drink with id=pk
     # serialize it
